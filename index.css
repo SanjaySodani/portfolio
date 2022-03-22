@@ -1,0 +1,224 @@
+@media screen and (max-width: 750px) {
+    .sidebar {
+        margin-top: 0;
+        margin-left: -250px;
+        position: fixed;
+        transition: all 0.5s ease-out;
+    }
+    .sidebarActive {
+        margin-top: 0;
+        position: fixed;
+        min-width: 250px;
+        max-width: 250px;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        z-index: 1;
+        transition: all 0.5s ease-in;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 751px) {
+    .sidebar {
+        margin-top: 0;
+        margin-left: -250px;
+        position: fixed;
+        transition: all 0.5s ease-in-out;
+    }
+    .sidebarActive {
+        margin-top: 0;
+        position: fixed;
+        min-width: 250px;
+        max-width: 250px;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        z-index: 1;
+        transition: all 0.5s ease-in-out;
+    }
+    .content {
+        margin-left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .contentActive {
+        margin-left: 250px;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+@media screen and (min-width: 1001px) {
+    .sidebar {
+        margin-top: 0;
+        position: fixed;
+        min-width: 250px;
+        max-width: 250px;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        z-index: 1;
+        transition: all 0.5s ease-in;
+    }
+    .sidebarActive {
+        margin-top: 0;
+        position: fixed;
+        min-width: 250px;
+        max-width: 250px;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        z-index: 1;
+        transition: all 0.5s ease-in;
+    }
+    .content {
+        margin-left: 250px;
+        transition: all 0.5s ease-in;
+    }
+    .contentActive {
+        margin-left: 250px;
+        transition: all 0.5s ease-in;
+    }
+    #menu-btn {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 792px) {
+    #home {
+        position: relative;
+    }
+    #home #name {
+        position: absolute;
+        top: 20%;
+        left: 1%;
+        color: whitesmoke;
+    }
+}
+
+@media screen and (max-width: 791px) {
+    #home #name {
+        color: midnightblue;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+#wrapper {
+    display: flex;
+}
+#menu-btn {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+}
+#home #name h4 {
+    font-family: sans-serif;
+}
+.circular_image {
+    background-image: url("sidebar-photo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+} 
+#links, #nav-links {
+    gap: 20px;
+}
+#underline {
+    border-bottom: 3px solid turquoise;
+    padding-bottom: 5px;
+}
+.heading {
+    border-bottom: 4px solid turquoise;
+    padding-bottom: 5px;
+}
+.project {
+    border-left: 2px solid turquoise;
+    
+}
+.project-heading {
+    margin-left: -10px;
+}
+.details ul li {
+    font-family: sans-serif;
+    letter-spacing: 0.8px;
+}
+.details ul li span {
+    font-weight: 600;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+#progressBar {
+    height: 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    width: 0%;
+    transition: width .2s ease-out;
+}
+
+
+
+.project-box {
+    width: 95%;
+    border-radius: 5px;
+}
+.project-text {
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+}
+.project-image, .project-image img {
+    border-radius: 5px;
+}
+
+
+@media (min-width: 992px) {
+    
+    .project-box {
+        position: relative;
+        width: 700px;
+        height: 350px;
+    }
+    .project-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 370px;
+        height: 350px;
+        padding: 20px;
+        padding-right: 95px;
+        border-radius: 3px;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    }
+    .project-image {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 400px;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+        z-index: 1;
+        transition: all .3s ease-out;
+    }
+    .project-box:hover .project-image {
+        right: 0;
+        transition: all .3s ease-out;
+    }
+    .project-image img {
+        border-radius: 5px;
+    }
+    .project-buttons {
+        position: absolute;
+        bottom: 20px;
+    }
+}
